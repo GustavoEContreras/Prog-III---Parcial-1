@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="styles.css">
+    <title>Solicitar viandas</title>
+</head>
+<body>
+    <div class="container">
+        <header class="blog-header py-3 bg-light">
+            <div class="row flex-nowrap justify-content-between align-items-center">
+                <div class="col-4 ms-2">
+                    <a class="text-muted" href="#">
+                        Logo
+                      </a>  
+                </div>
+                
+              <div class="col-8 ms-5">
+                <a class="blog-header-logo text-dark" href="#">
+                  Rotiseria el mejor sabor
+                </a>
+              </div>
+              
+            </div>
+          </header>
+      
+          <div class="nav-scroller py-1 mb-2">
+            <nav class="nav d-flex ">
+              <a class="p-2 text-muted active" href="#about">
+                Home
+              </a>
+              <a class="ms-3 p-2 text-muted" href="#projects">
+                Viandas
+              </a>
+              <a class="ms-3 p-2 text-muted" href="#pricing">
+                Menues
+              </a>
+              <a class="ms-3 p-2 text-muted" href="#contact">
+                Otros
+              </a>
+            </nav>
+          </div>
+    </div>
+    <div class="container">
+        <div class="text-left border-bottom">
+            <h2>Gestion de las viandas</h2>
+        </div>
+        <hr>
+
+        <section id="formularioWrapper">
+            <div class="wrapper bg-white">
+                <div class="text-left border-bottom">
+                    <h3>Formulario para solicitar vianda</h3>
+                    <div class="container px-5 my-5">
+                        <form id="contactForm" data-sb-form-api-token="API_TOKEN" class="form-inline" onsubmit="return false">
+                            <h5 class="text-danger" id="textoError">Asegurese de rellenar todos los datos esenciales</h5>
+                            <div class="mb-3 form-group">
+                                <label class="form-label" for="frecuencia">Frecuencia</label>
+                                <select class="form-select" id="frecuencia" aria-label="Frecuencia">
+                                    <option value="Quincenal">Quincenal</option>
+                                    <option value="Mensual">Mensual</option>
+                                </select>                           
+                            </div>
+                            <div class="mb-3">
+                                <div class="col-7">
+                                    <label class="form-label d-block">Tipo menu</label>
+                                </div>
+                                <div class="col-8">
+                                    <div class="form-check">
+                                        <input class="form-check-input" id="normal" type="radio" name="tipoMenu" data-sb-validations="required" />
+                                        <label class="form-check-label" for="normal">Normal</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" id="diabetico" type="radio" name="tipoMenu" data-sb-validations="required" />
+                                        <label class="form-check-label" for="diabetico">Diabético</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" id="vegetariano" type="radio" name="tipoMenu" data-sb-validations="required" />
+                                        <label class="form-check-label" for="vegetariano">Vegetariano</label>
+                                    </div>
+                                </div>
+                                
+                                
+                                
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label d-block">Items a incluir</label>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" id="entrada" type="checkbox" name="itemsAIncluir" data-sb-validations="required" />
+                                    <label class="form-check-label" for="entrada">Entrada</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" id="platoPrincipal" type="checkbox" name="itemsAIncluir" data-sb-validations="required" />
+                                    <label class="form-check-label" for="platoPrincipal">Plato principal</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" id="postre" type="checkbox" name="itemsAIncluir" data-sb-validations="required" />
+                                    <label class="form-check-label" for="postre">Postre</label>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label" for="fechaInicio">Fecha inicio</label>
+                                <input class="form-control" id="fechaInicio" type="date" placeholder="Fecha inicio" data-sb-validations="required" />
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label" for="cantidad">Cantidad</label>
+                                <input class="form-control" id="cantidad" type="number" placeholder="Cantidad" data-sb-validations="required" />
+                            </div>
+                            <div class="d-grid">
+                                <button class="btn  btn-lg btn-outline-dark" id="submitButton" type="submit">Solicitar Viandas</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <hr>
+        </section>
+        
+        <section>
+            <table class="table table-bordered border-dark">
+                <thead>
+                    <tr>
+                      <th scope="col" colspan="7">
+                        <div class="row">
+                            <div class="col-10 pedidoVianda"> <div class="text-center">
+                                Mis pedidos de Viandas
+                            </div></div>
+                            <div class="col-2">
+                                <div class="text-end">
+                                    <button type="button" class="btn btn-dark" id="botonNuevaVianda">Nueva vianda</button>
+                                </div>
+                            </div>
+                        </div>
+                    </th>
+                    </tr>
+                  </thead>
+                  <tbody id="listaViandas">
+                    <tr>
+                      <th scope="row">Frecuencia</th>
+                      <th scope="row">Tipo menu</th>
+                      <th scope="row">Items incluidos</th>
+                      <th scope="row">Fecha inicio</th>
+                      <th scope="row">Cantidad</th>
+                      <th scope="row">Estado</th>
+                      <th scope="row">Acciones</th>
+                    </tr>
+                    <tr>
+                        <td>Mensual</td>
+                        <td>Normal</td>
+                        <td>Entrada - Plato principal - Postre</td>
+                        <td>01/10/2022</td>
+                        <td>2</td>
+                        <td>Confirmada</td>
+                        <td>
+                            <div class="text-center">
+                                <button class="btn btn-lg btn-outline-dark">Cancelar subscripción</button>
+                            </div>
+                            
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Quincenal</td>
+                        <td>Vegetariano</td>
+                        <td>Entrada - Plato principal</td>
+                        <td>15/10/2022</td>
+                        <td>1</td>
+                        <td>Pendiente</td>
+                        <td>
+                            <div class="text-center">
+                                <button class="btn btn-lg btn-outline-dark botonEliminar">Eliminar</button>
+                            </div>
+                            
+                        </td>
+                    </tr>
+                  </tbody>    
+            </table>
+        </section>
+
+    </div>
+    
+
+    <script src="function.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,10 @@
+.wrapper {
+    max-width: 70%;
+    border-radius: 10px;
+    margin: auto;
+    padding: 30px 40px;
+    box-shadow: 20px 20px 80px rgb(206, 206, 206);
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
